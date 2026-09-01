@@ -7,15 +7,17 @@ type VideoCardProps = {
 
 export default function VideoCard({ video }: VideoCardProps) {
   return (
-    <article className="flex flex-col gap-3">
-      <VideoPlayer video={video} />
+    <article className="flex min-h-0 w-full flex-col gap-3">
+      <div className="min-h-0 flex-1 overflow-hidden rounded-lg">
+        <VideoPlayer video={video} />
+      </div>
 
-      <div className="flex flex-col gap-1">
-        <h3 className="text-base font-semibold text-(--color-text-primary)">
+      <div className="flex shrink-0 flex-col gap-1">
+        <h3 className="text-sm font-semibold text-(--color-text-primary)">
           {video.title}
         </h3>
 
-        <p className="text-sm leading-6 text-(--color-text-secondary)">
+        <p className="text-xs leading-5 text-(--color-text-secondary)">
           {video.description}
         </p>
       </div>

@@ -5,6 +5,9 @@ type VideoPlayerProps = {
 };
 
 export default function VideoPlayer({ video }: VideoPlayerProps) {
+  const playerClassName =
+    "mx-auto aspect-video w-full max-w-lg rounded-lg";
+
   if (video.provider === "youtube" && video.videoId) {
     return (
       <iframe
@@ -18,29 +21,31 @@ export default function VideoPlayer({ video }: VideoPlayerProps) {
           gyroscope;
           picture-in-picture;
           web-share
-          "
+        "
         allowFullScreen
-        className="aspect-video w-full rounded-lg"
+        className={playerClassName}
       />
     );
   }
+
   if (video.provider === "aparat" && video.videoId) {
     return (
       <iframe
         src={`https://www.aparat.com/video/video/embed/videohash/${video.videoId}/vt/frame`}
         title={video.title}
         allowFullScreen
-        className="aspect-video w-full rounded-lg"
+        className={playerClassName}
       />
     );
   }
+
   if (video.provider === "self-hosted" && video.videoUrl) {
     return (
       <video
         src={video.videoUrl}
         controls
         preload="metadata"
-        className="aspect-video w-full rounded-lg"
+        className={playerClassName}
       >
         مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
       </video>
@@ -48,8 +53,10 @@ export default function VideoPlayer({ video }: VideoPlayerProps) {
   }
 
   return (
-    <div className="flex aspect-video w-full items-center justify-center rounded-lg bg-(--color-bg-secondary)">
-      <p className="text-sm text-(--color-text-muted)">Video nicht verfügbar</p>
+    <div className="mx-auto flex aspect-video w-full max-w-lg items-center justify-center rounded-lg bg-(--color-bg-secondary)">
+      <p className="text-sm text-(--color-text-muted)">
+        Video nicht verfügbar
+      </p>
     </div>
   );
 }

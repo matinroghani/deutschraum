@@ -17,7 +17,10 @@ export default async function Words({
 }) {
   const { word } = await params;
 
-  const dictionaryWord = getDictionaryWordService(dictionaryMock, word);
+  const dictionaryWord = getDictionaryWordService(
+    dictionaryMock,
+    word,
+  );
 
   if (!dictionaryWord) {
     notFound();
@@ -30,7 +33,8 @@ export default async function Words({
       <section className="flex flex-col gap-5">
         <DictionaryWordProvider dictionaryWord={dictionaryWord}>
           <WordBaseInfos />
-          <div className="flex gap-5">
+
+          <div className="grid grid-cols-1 items-start gap-5 lg:grid-cols-2">
             <WordExample />
             <WordVideos />
           </div>

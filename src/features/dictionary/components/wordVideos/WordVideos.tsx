@@ -1,11 +1,18 @@
 "use client";
 
+import { useState } from "react";
 import { useDictionaryWord } from "@/hooks/DictionaryWord/dictionaryWordHook";
 import { Video as VideoIcon } from "lucide-react";
 
 import SectionTitle from "@/components/shared/SectionTitle/SectionTitle";
 import VideoCard from "./components/WordVideoCard";
 import { Video } from "../../types";
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 
 export default function WordVideos() {
   const { dictionaryWord } = useDictionaryWord();
@@ -17,20 +24,30 @@ export default function WordVideos() {
   }
 
   return (
-    <section className="flex flex-col gap-5 rounded-lg border border-(--color-border) px-6 py-8">
+    <section className="flex h-full min-h-0 flex-col gap-5 rounded-lg border border-(--color-border) p-6">
       <SectionTitle
         title="Videos"
         icon={VideoIcon}
       />
 
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-        {videos.map((video: Video) => (
-          <VideoCard
-            key={video.id}
-            video={video}
-          />
-        ))}
-      </div>
+      <Carousel
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+        className="flex min-h-0 flex-1 flex-col"
+      >
+        <CarouselContent className="flex min-h-0 flex-1">
+          {videos.map((video: Video) => (
+            <CarouselItem
+              key={video.id}
+              className="flex min-h-0"
+            >
+              <VideoCard video={video} />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
     </section>
   );
 }
