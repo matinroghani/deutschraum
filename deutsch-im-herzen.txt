@@ -1,0 +1,785 @@
+مشخصات اولیه پروژه — پلتفرم آموزش زبان آلمانی
+1. ایده کلی پروژه
+
+این پروژه یک پلتفرم وب مدرن برای یادگیری زبان آلمانی است که تمرکز اصلی آن در نسخه اولیه روی زبان‌آموزان بزرگسال و نوجوان، به‌خصوص افرادی است که قصد یادگیری آلمانی برای زندگی، تحصیل، کار، Ausbildung و مهاجرت به آلمان را دارند.
+
+هدف پروژه صرفاً ارائه یک دوره آموزشی یا یک دیکشنری ساده نیست؛ بلکه قرار است به مرور به یک Personalized German Learning Platform تبدیل شود؛ یعنی سیستم بتواند سطح، کلمات یادگرفته‌شده، اشتباهات، نقاط ضعف، فعالیت‌ها و پیشرفت هر کاربر را ذخیره و بر اساس آن مسیر یادگیری شخصی‌سازی‌شده ایجاد کند.
+
+محصول از ابتدا با رویکرد Scalable Product طراحی می‌شود تا در آینده قابلیت‌هایی مانند دوره‌های ویدیویی، AI Tutor، تمرین‌های هوشمند، سیستم اشتراک، پرداخت، محتوای تخصصی Ausbildung و حتی مسیر جداگانه آموزش کودکان به آن اضافه شود.
+
+2. هدف MVP
+
+هدف MVP این نیست که تمام قابلیت‌های یک پلتفرم آموزش زبان را پیاده‌سازی کند.
+
+هدف این است که یک هسته واقعی و قابل استفاده ایجاد شود که شامل چهار بخش اصلی باشد:
+
+Dictionary
+Learning
+Practice
+User Progress
+
+کاربر بتواند:
+
+حساب کاربری ایجاد کند.
+وارد سیستم شود.
+کلمات آلمانی را جستجو کند.
+معنی و اطلاعات کامل کلمات را ببیند.
+کلمات را به لیست یادگیری خود اضافه کند.
+دروس و محتوای آموزشی را مطالعه کند.
+تمرین‌های مختلف انجام دهد.
+نتیجه تمرین‌ها ذخیره شود.
+پیشرفت خود را مشاهده کند.
+سیستم بر اساس عملکرد او پیشنهاد مرور و تمرین ارائه دهد.
+3. مخاطب اصلی MVP
+
+تمرکز نسخه اول روی بزرگسالان و زبان‌آموزان آلمانی است.
+
+مخاطبان اصلی:
+
+زبان‌آموزان A1 تا B2
+افرادی که برای مهاجرت به آلمان آماده می‌شوند
+متقاضیان Ausbildung
+دانشجویان
+افرادی که قصد کار در آلمان دارند
+افرادی که می‌خواهند German واقعی و کاربردی یاد بگیرند
+
+در MVP تمرکز اصلی روی A1–B2 خواهد بود، اما ساختار دیتابیس و محتوا باید طوری باشد که C1 و C2 نیز در آینده قابل اضافه شدن باشند.
+
+4. بخش‌های اصلی MVP
+
+MVP در مرحله اول از این بخش‌ها تشکیل می‌شود:
+
+┌─────────────────────────────┐
+│          Platform           │
+├─────────────────────────────┤
+│ Dictionary                  │
+│ Learning                    │
+│ Practice                    │
+│ Progress                    │
+│ User Account                │
+└─────────────────────────────┘
+5. Dictionary
+
+Dictionary یکی از بخش‌های اصلی محصول است.
+
+تمرکز اولیه روی یک German-to-German Dictionary آموزشی است، نه صرفاً ترجمه لغات.
+
+مثلاً کاربر جستجو می‌کند:
+
+aufgeben
+
+سیستم باید بتواند اطلاعاتی مانند این موارد را نمایش دهد:
+
+Word
+
+aufgeben
+
+Type
+
+Verb
+
+Level
+
+B1
+
+Definition
+
+تعریف ساده و قابل فهم به زبان آلمانی.
+
+Examples
+
+چند جمله واقعی و کاربردی.
+
+Grammar
+
+اطلاعات صرف فعل:
+
+aufgeben
+gab auf
+hat aufgegeben
+Related Words
+die Aufgabe
+aufgeben
+Synonyms
+
+کلمات مرتبط و مترادف در صورت وجود.
+
+Tags
+
+مثلاً:
+
+Alltag
+B1
+Verb
+6. Learning
+
+بخش Learning محل یادگیری ساختاریافته است.
+
+در MVP قرار نیست یک سیستم آموزش بسیار بزرگ داشته باشیم.
+
+ساختار اولیه:
+
+Learning
+│
+├── Vocabulary
+├── Grammar
+├── Expressions
+└── Culture
+Vocabulary
+
+کاربر بتواند لغات را بر اساس سطح و موضوع یاد بگیرد.
+
+مثلاً:
+
+A1
+├── Familie
+├── Essen
+├── Kleidung
+└── Alltag
+
+A2
+├── Arbeit
+├── Reisen
+└── Wohnen
+
+B1
+├── Beruf
+├── Gesellschaft
+└── Kommunikation
+
+هر Lesson شامل مجموعه‌ای از کلمات و مثال‌ها خواهد بود.
+
+7. Expressions / Redewendungen
+
+یکی از بخش‌های متمایز پروژه.
+
+مثلاً:
+
+Alles im grünen Bereich
+
+سیستم نشان می‌دهد:
+
+Meaning
+Level
+Context
+Example
+Usage
+Similar Expressions
+
+مثلاً:
+
+Expression:
+Alles im grünen Bereich
+
+Level:
+B1
+
+Category:
+Alltag
+
+Meaning:
+Alles ist in Ordnung.
+
+در آینده این قسمت می‌تواند شامل:
+
+Redewendungen
+Kollokationen
+Sprichwörter
+Umgangssprache
+Feste Wendungen
+
+باشد.
+
+8. Grammar
+
+Grammar در MVP وجود دارد، اما قرار نیست یک سیستم آموزشی عظیم باشد.
+
+مباحث به صورت Lesson ارائه می‌شوند.
+
+مثلاً:
+
+A1
+├── Personalpronomen
+├── sein / haben
+├── Präsens
+└── Artikel
+
+A2
+├── Perfekt
+├── Dativ
+├── Akkusativ
+└── Modalverben
+
+B1
+├── Nebensätze
+├── Konjunktiv II
+└── Relativsätze
+
+هر Grammar Lesson شامل:
+
+Explanation
+Examples
+Common Errors
+Exercises
+
+خواهد بود.
+
+9. Practice
+
+Practice بخش بسیار مهم MVP است.
+
+تمرین‌ها در نسخه اول می‌توانند شامل موارد زیر باشند:
+
+Multiple Choice
+_____ Tisch
+
+A) der
+B) die
+C) das
+Article Practice
+_____ Haus
+
+der
+die
+das
+Vocabulary
+
+نمایش کلمه و انتخاب معنی.
+
+Sentence Completion
+Ich ___ gestern nach Berlin gefahren.
+Translation
+من امروز کار می‌کنم.
+
+کاربر پاسخ می‌دهد و سیستم نتیجه را بررسی می‌کند.
+
+10. User Progress
+
+هر فعالیت مهم کاربر باید قابل ذخیره باشد.
+
+مثلاً:
+
+User
+ ↓
+Learning Activity
+ ↓
+Result
+ ↓
+Progress
+
+سیستم باید بتواند اطلاعاتی مانند این‌ها را نگه دارد:
+
+Words learned
+Exercises completed
+Correct answers
+Wrong answers
+Current level
+Learning streak
+Weak topics
+Recently learned words
+
+Dashboard کاربر می‌تواند چیزی شبیه این باشد:
+
+Current Level: B1
+
+Words Learned: 824
+
+Exercises:
+1,240
+
+Accuracy:
+82%
+
+Streak:
+12 Days
+
+Weak Areas:
+Artikel
+Präpositionen
+Konjunktiv II
+11. Spaced Repetition
+
+این قابلیت از ابتدا در معماری در نظر گرفته می‌شود، اما لازم نیست در اولین نسخه پیچیده باشد.
+
+هدف:
+
+سیستم تشخیص دهد کاربر چه کلماتی را باید دوباره مرور کند.
+
+مثلاً:
+
+Word
+ ↓
+User answers
+ ↓
+Correct / Wrong
+ ↓
+Difficulty
+ ↓
+Next Review Date
+
+در نسخه MVP می‌توان یک الگوریتم ساده برای تعیین زمان مرور داشت.
+
+بعداً می‌توان آن را به الگوریتم‌های پیشرفته‌تر Spaced Repetition تبدیل کرد.
+
+12. Authentication
+
+کاربر باید بتواند:
+
+Register
+Login
+Logout
+
+انجام دهد.
+
+اطلاعات حساب کاربر شامل مواردی مانند:
+
+Name
+Email
+Password
+Level
+Learning Goals
+
+خواهد بود.
+
+در آینده:
+
+Google Login
+Apple Login
+OAuth
+
+نیز قابل اضافه شدن است.
+
+13. Backend
+
+Backend پروژه از ابتدا واقعی خواهد بود و صرفاً Mock API نخواهد بود.
+
+Stack پیشنهادی:
+
+Node.js
+TypeScript
+NestJS / Express
+PostgreSQL
+Prisma
+REST API
+Zod
+JWT / Session Authentication
+
+برای نسخه اول، معماری Backend باید Modular Monolith باشد.
+
+ساختار مفهومی:
+
+Backend
+│
+├── Auth
+├── Users
+├── Dictionary
+├── Vocabulary
+├── Lessons
+├── Grammar
+├── Expressions
+├── Exercises
+├── Progress
+└── Review
+14. Database
+
+Database اصلی:
+
+PostgreSQL
+
+مدل اولیه می‌تواند شامل Entityهای زیر باشد:
+
+User
+Word
+WordDefinition
+Example
+Category
+Lesson
+VocabularyItem
+GrammarLesson
+Expression
+Exercise
+ExerciseOption
+UserProgress
+UserWord
+Review
+
+بعداً Entityهای بیشتری اضافه خواهند شد.
+
+نکته مهم این است که Database از ابتدا طوری طراحی شود که قابلیت توسعه داشته باشد و مجبور نباشیم با اضافه شدن Featureهای جدید کل معماری را تغییر دهیم.
+
+15. Frontend
+
+Frontend باید یکی از نقاط قوت اصلی پروژه باشد.
+
+Stack:
+
+Next.js
+TypeScript
+Tailwind CSS
+shadcn/ui
+Lucide React
+React Hook Form
+Zod
+
+در صورت نیاز:
+
+Redux Toolkit
+
+برای Stateهای واقعاً global.
+
+Frontend شامل دو فضای اصلی خواهد بود:
+
+Public Website
+Home
+About
+Features
+Dictionary Preview
+Learning Preview
+Pricing
+Login
+Register
+Application
+Dashboard
+Dictionary
+Learning
+Practice
+Progress
+Profile
+Settings
+16. Design Direction
+
+این پروژه قرار نیست شبیه یک:
+
+Language Academy Website
+
+معمولی باشد.
+
+هویت بصری:
+
+Premium Editorial + Modern Educational SaaS
+
+یعنی:
+
+رسمی
+مینیمال
+مدرن
+حرفه‌ای
+Typography محور
+فضای مناسب مطالعه
+بدون رنگ‌های کودکانه
+بدون ظاهر شلوغ
+دارای Dark / Light Mode در صورت نیاز
+
+تمرکز UI روی خوانایی محتوای آلمانی خواهد بود.
+
+17. Culture
+
+در MVP یک بخش اولیه برای German Culture نیز وجود خواهد داشت.
+
+موضوعات نمونه:
+
+Leben in Deutschland
+Arbeitskultur
+Ausbildung
+Universität
+Alltag
+Kommunikation
+Wohnen
+Behörden
+
+هر مقاله شامل:
+
+Title
+Category
+Level
+Content
+Vocabulary
+Related Expressions
+
+خواهد بود.
+
+این بخش بعدها می‌تواند بسیار بزرگ‌تر شود.
+
+18. Ausbildung / Beruf
+
+این قسمت در MVP می‌تواند به شکل محدود و پایه‌ای وجود داشته باشد، اما تبدیل شدن آن به یک بخش اصلی را به فاز بعدی موکول می‌کنیم.
+
+در آینده:
+
+Deutsch für die Ausbildung
+Deutsch im Beruf
+Bewerbung
+Vorstellungsgespräch
+Arbeitsplatz
+Berufsschule
+E-Mails
+Telefonieren
+IT-Deutsch
+
+این بخش یکی از مهم‌ترین مسیرهای آینده محصول خواهد بود.
+
+19. Video Courses
+
+ویدئو و فروش دوره جزء Core MVP نیست.
+
+در معماری باید برای آن جا داشته باشیم، ولی در نسخه اول لازم نیست پیاده‌سازی شود.
+
+در آینده:
+
+Course
+ ↓
+Module
+ ↓
+Lesson
+ ↓
+Video
+ ↓
+Transcript
+ ↓
+Vocabulary
+ ↓
+Exercises
+
+و سپس:
+
+Free Content
++
+Premium Courses
+20. بخش‌هایی که عمداً در MVP نیستند
+
+برای جلوگیری از Scope Creep، این موارد فعلاً خارج از MVP هستند:
+
+❌ AI Tutor
+❌ AI Conversation
+❌ Payment
+❌ Subscription
+❌ Video Course Marketplace
+❌ Mobile App
+❌ Kids Platform
+❌ Advanced Recommendation Engine
+❌ Social Network
+❌ Live Classes
+❌ Community
+❌ Microservices
+
+این‌ها Featureهای آینده هستند، نه Featureهای MVP.
+
+21. مسیر توسعه محصول
+
+پروژه بهتر است به چند Phase تقسیم شود.
+
+Phase 1 — MVP
+Authentication
++
+Dictionary
++
+Vocabulary Learning
++
+Grammar
++
+Expressions
++
+Practice
++
+Progress
++
+Basic Spaced Repetition
+
+هدف:
+
+یک زبان‌آموز بتواند با سیستم ثبت‌نام کند، آلمانی یاد بگیرد، تمرین کند و پیشرفت خودش را ببیند.
+
+Phase 2 — Personalized Learning
+
+اضافه می‌شود:
+
+Advanced Spaced Repetition
+Personalized Exercises
+Weakness Detection
+Learning Recommendations
+Personal Error Database
+
+سیستم شروع می‌کند به شناختن کاربر.
+
+Phase 3 — German for Germany
+
+تمرکز روی:
+
+Ausbildung
+Work
+Bewerbung
+Interview
+University
+Daily Life
+Culture
+Phase 4 — AI
+
+بعداً:
+
+AI Tutor
+AI Conversation
+Writing Correction
+Speaking Practice
+Personalized Exercises
+AI Vocabulary Generation
+Phase 5 — Monetization
+
+مدل درآمدی:
+
+Free
+   ↓
+Premium
+   ↓
+Courses
+   ↓
+Subscription
+
+مثلاً Free:
+
+Dictionary
+محدودیت تمرین
+
+Premium:
+
+Unlimited Practice
+Spaced Repetition
+Personalized Learning
+Advanced Content
+AI Features
+Phase 6 — Kids
+
+بعداً می‌توان بخش کودکان را به عنوان یک Product Line جداگانه اضافه کرد:
+
+Kids
+├── Worlds
+├── Characters
+├── Games
+├── Stories
+├── Rewards
+└── Progress
+
+اما این بخش نباید معماری محصول اولیه را پیچیده کند.
+
+22. چشم‌انداز نهایی
+
+هدف نهایی پروژه تبدیل شدن از:
+
+German Learning Website
+
+به:
+
+Personal German Learning Platform
+
+است.
+
+سیستم در نهایت باید بتواند بداند:
+
+Who is the user?
+        ↓
+What is their level?
+        ↓
+What have they learned?
+        ↓
+What do they struggle with?
+        ↓
+What should they review?
+        ↓
+What should they learn next?
+        ↓
+What is their goal?
+        ↓
+How can the platform help them reach it?
+
+بنابراین محصول نهایی ترکیبی از:
+
+Dictionary
++
+Learning Platform
++
+Practice System
++
+Progress Tracking
++
+Spaced Repetition
++
+German Culture
++
+Ausbildung / Career German
++
+AI
++
+Premium Courses
+
+خواهد بود.
+
+23. اصل مهم توسعه پروژه
+
+این پروژه قرار نیست صرفاً یک پروژه Frontend باشد که بعداً یک Backend به آن وصل کنیم.
+
+از ابتدا:
+
+Frontend
+       ↕
+REST API
+       ↕
+Backend
+       ↕
+Business Logic
+       ↕
+PostgreSQL
+
+طراحی می‌شود.
+
+بنابراین هر چیزی که در مسیر Backend یاد می‌گیری، باید تا حد امکان در همین پروژه پیاده‌سازی شود.
+
+مثلاً:
+
+یادگیری REST API
+        ↓
+ساخت Dictionary API
+
+یادگیری SQL
+        ↓
+طراحی Word Database
+
+یادگیری Authentication
+        ↓
+ساخت User System
+
+یادگیری Authorization
+        ↓
+Admin / User Roles
+
+یادگیری Validation
+        ↓
+Exercise Submission Validation
+
+یادگیری Transactions
+        ↓
+ثبت نتیجه تمرین + Progress
+
+یادگیری Testing
+        ↓
+تست APIها
+
+یادگیری Docker
+        ↓
+Containerize Backend + PostgreSQL
+
+یادگیری Deployment
+        ↓
+Deploy Production
+
+در نتیجه پروژه همزمان سه نقش خواهد داشت:
+
+1. پروژه یادگیری
+
+برای یادگیری واقعی Backend.
+
+2. پروژه Portfolio
+
+برای نشان دادن مهارت‌های حرفه‌ای Frontend + Backend.
+
+3. پروژه Product
+
+با معماری‌ای که بتواند در آینده به یک محصول واقعی و درآمدزا تبدیل شود.

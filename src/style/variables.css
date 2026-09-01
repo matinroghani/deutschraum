@@ -1,0 +1,129 @@
+:root {
+  /* =========================================================
+     BRAND
+     ========================================================= */
+  --color-brand: #c9a45c;
+  --color-brand-hover: #b9914f;
+  --color-brand-soft: #f4ecd9;
+
+  /* =========================================================
+     BACKGROUNDS
+     ========================================================= */
+  --color-bg: #f8f8f6;
+  --color-bg-secondary: #f3f4f1;
+  --color-bg-dark: #10151c;
+
+  /* =========================================================
+     SURFACES
+     ========================================================= */
+  --color-surface: #ffffff;
+  --color-surface-hover: #fafaf8;
+
+  /* =========================================================
+     TEXT COLORS
+     ========================================================= */
+  --color-text: #252a30;
+  --color-text-secondary: #5e6670;
+  --color-text-muted: #9aa1a8;
+  --color-text-inverse: #ffffff;
+
+  /* =========================================================
+     SIDEBAR / NAVIGATION
+     ========================================================= */
+  --color-nav-bg: #10151c;
+  --color-nav-hover: #181f27;
+  --color-nav-active: #1d252e;
+
+  --color-nav-text: #d3d9de;
+  --color-nav-text-muted: #89939d;
+  --color-nav-icon: #8f99a3;
+
+  /* Active */
+  --color-nav-icon-active: #d5b36b;
+  --color-nav-active-bg: rgba(201, 164, 92, 0.09);
+  --color-nav-active-border: #b99a5d;
+
+  /* =========================================================
+      DEFINITION CARDS
+      ========================================================= */
+  /* German */
+  --color-definition-german-bg: #eef4f7;
+  --color-definition-german-border: #d5e2e8;
+  --color-definition-german-accent: #66819b;
+  --color-definition-german-text: #354b5a;
+
+  /* Persian */
+  --color-definition-persian-bg: #eef4f0;
+  --color-definition-persian-border: #d7e3dc;
+  --color-definition-persian-accent: #5d8b74;
+  --color-definition-persian-text: #35483f;
+
+  /* =========================================================
+     BORDERS
+     ========================================================= */
+  --color-border: #e5e7e4;
+  --color-border-focus: #cfcfcf;
+
+  /* =========================================================
+     STATUS
+     ========================================================= */
+  --color-success: #5d8b74;
+  --color-error: #b86f6f;
+  --color-warning: #b08a4d;
+  --color-info: #66819b;
+
+  /* =========================================================
+     SHADOWS
+     ========================================================= */
+  --shadow-sm: 0 2px 6px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 6px 18px rgba(15, 23, 42, 0.06);
+  --shadow-lg: 0 12px 32px rgba(15, 23, 42, 0.08);
+
+  /* =========================================================
+     BORDER RADIUS
+     ========================================================= */
+  --radius: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  /* =========================================================
+     SPACING / LAYOUT
+     ========================================================= */
+  --sidebar-width: 248px;
+
+}
+
+/* =========================================================
+     LAYOUT SPACING
+     ========================================================= */
+:root {
+  --spacing-page-x: clamp(20px, 3vw, 40px);
+  --spacing-page-y: clamp(20px, 3vw, 32px);
+
+  --spacing-section: 24px;
+
+  --spacing-sidebar-x: 20px;
+  --spacing-sidebar-y: 24px;
+
+  --spacing-header-x: 24px;
+  --spacing-header-y: 16px;
+
+  --spacing-component: 16px;
+}
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+.dark {
+  --color-bg: #10151c;
+  --color-bg-secondary: #151b22;
+
+  --color-surface: #151b22;
+  --color-surface-hover: #1b222a;
+
+  --color-text: #edf0f2;
+  --color-text-secondary: #c2c9cf;
+  --color-text-muted: #7f8a95;
+
+  --color-border: #27303a;
+}
