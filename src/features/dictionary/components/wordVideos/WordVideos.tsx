@@ -24,7 +24,7 @@ export default function WordVideos() {
   }
 
   return (
-    <section className="flex h-full min-h-0 flex-col gap-5 rounded-lg border border-(--color-border) p-6">
+    <section className="flex h-full min-h-0 flex-col gap-5 rounded-lg border border-(--color-border) p-6  bg-(--color-white)">
       <SectionTitle
         title="Videos"
         icon={VideoIcon}

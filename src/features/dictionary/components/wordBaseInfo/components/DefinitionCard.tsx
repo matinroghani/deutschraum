@@ -30,8 +30,8 @@ export default function DefinitionCard({
           text-lg
           ${
             isPersian
-              ? "text-[#5d8b74]"
-              : "text-[#66819b]"
+              ? "text-(--color-definition-persian-accent)"
+              : "text-(--color-definition-german-accent)"
           }
         `}
       >

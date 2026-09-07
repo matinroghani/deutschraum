@@ -6,15 +6,22 @@ import { SidebarProvider } from "@/contexts/SidebarContext";
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <SidebarProvider>
-      <div className="flex min-h-screen">
+      <div className="flex h-dvh overflow-hidden">
         <Sidebar />
         <MobileSidebar />
-        
-        <div className="flex min-w-0 flex-1 flex-col">
+
+        <div className="flex min-w-0 flex-1 flex-col overflow-hidden">
           <Header />
 
           <main
-            className=" min-w-0 flex-1 px-(--spacing-page-x) py-(--spacing-page-y) "
+            className="
+              min-h-0
+              min-w-0
+              flex-1
+              overflow-y-auto
+              px-(--spacing-page-x)
+              py-(--spacing-page-y)
+            "
           >
             {children}
           </main>

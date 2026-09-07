@@ -2,6 +2,7 @@ import BreadCrumb from "@/components/shared/breadCrumb/BreadCreumb";
 
 import WordBaseInfos from "@/features/dictionary/components/wordBaseInfo/Word-BaseInfos";
 import WordExample from "@/features/dictionary/components/wordExample/Word-Example";
+import WordLinks from "@/features/dictionary/components/wordLinks/Word-Links";
 import WordVideos from "@/features/dictionary/components/wordVideos/WordVideos";
 import { DictionaryWordProvider } from "@/features/dictionary/context/DictionaryContext";
 
@@ -37,6 +38,10 @@ export default async function Words({
           <div className="grid grid-cols-1 items-start gap-5 lg:grid-cols-2">
             <WordExample />
             <WordVideos />
+          </div>
+
+          <div>
+            <WordLinks />
           </div>
         </DictionaryWordProvider>
       </section>

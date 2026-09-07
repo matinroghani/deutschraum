@@ -14,7 +14,7 @@ export default function WordExample() {
   );
 
   return (
-    <section className="flex flex-col gap-2 rounded-lg border border-(--color-border) px-6 py-8">
+    <section className="flex flex-col gap-2 rounded-lg border border-(--color-border) px-6 py-8  bg-(--color-white)">
       <SectionTitle title="Beispiele" icon={BookA} />
 
       <div className="flex flex-col">

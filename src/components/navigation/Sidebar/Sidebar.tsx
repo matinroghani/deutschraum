@@ -5,17 +5,17 @@ export default function Sidebar() {
     <aside
       className="
         hidden
-        min-h-screen
-        w-[var(--sidebar-width)]
+        h-full
+        w-(--sidebar-width)
         shrink-0
         flex-col
         justify-between
         overflow-hidden
-        bg-[var(--color-nav-bg)]
-        px-[var(--spacing-sidebar-x)]
-        py-[var(--spacing-sidebar-y)]
-        rounded-tr-[var(--radius-lg)]
-        rounded-br-[var(--radius-lg)]
+        bg-(--color-nav-bg)
+        px-(--spacing-sidebar-x)
+        py-(--spacing-sidebar-y)
+        rounded-tr-(--radius-lg)
+        rounded-br-(--radius-lg)
         lg:flex
       "
     >

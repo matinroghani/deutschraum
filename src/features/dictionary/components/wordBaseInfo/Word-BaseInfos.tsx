@@ -6,7 +6,7 @@ import WordDefinition from "./Word-Definition";
 export default function WordBaseInfos() {
 
   return (
-    <div className="flex flex-col gap-3 rounded-lg border border-(--color-border) px-6 py-10">
+    <div className="flex flex-col gap-3 rounded-lg border border-(--color-border) px-6 py-10  bg-(--color-white)">
       {/* Word heading */}
       <Heading />
 
